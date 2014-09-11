@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.0
+Version: 1.5
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+      
+   <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+   <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+   <link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+   <!-- END GLOBAL MANDATORY STYLES -->
+   <!-- BEGIN PAGE LEVEL STYLES -->
+   
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-datepicker/css/datepicker.css" />
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-timepicker/compiled/timepicker.css" />
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-colorpicker/css/colorpicker.css" />
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+   
+   <!-- END PAGE LEVEL STYLES -->
+  
+</head>
+
+
+<body>
+   <div class="clearfix"></div>
+   <!-- BEGIN CONTAINER -->
+   <div class="page-container">
+   <?php
+
+include('headerjscss.php');
+include('sidemenu.php');
+include('jsinclude.php');
+?>
+<script type="text/javascript">
+ 
+	$(document).ready(function(){
+	$('#weekdays').hide();
+	$('#monthly').hide();
+	 $('#type').on('click',function(){
+	 var value=$(this).val();
+	 console.log(value);
+	 if(value === 'Weekly')
+	 {
+	   $('#weekdays').show();
+	    $('#monthly').hide();
+	   
+	  console.log(value);
+	 }
+	  else if(value === 'Monthly')
+	 {
+	  $('#weekdays').hide();
+	   $('#monthly').show();
+	   
+	  console.log(value);
+	 }
+	 else
+	 {
+	 $('#weekdays').hide();
+	 $('#monthly').hide();
+	 }
+	
+	 
+	 });
+});
+
+
+ 
+</script>
+    
+      <!-- BEGIN PAGE -->
+      <div class="page-content">
+         <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->               
+         <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                     <h4 class="modal-title">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                     Widget settings form goes here
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn blue">Save changes</button>
+                     <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+               
+         <!-- BEGIN PAGE HEADER-->
+         <div class="row">
+            <div class="col-md-12">
+               <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+               <h3 class="page-title">
+                  Add Confernce<small></small>
+               </h3>
+               <ul class="page-breadcrumb breadcrumb">
+                  <li class="btn-group">
+                     <button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+                     <span>Actions</span> <i class="icon-angle-down"></i>
+                     </button>
+                     <ul class="dropdown-menu pull-right" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <i class="icon-home"></i>
+                     <a href="dashboard">Home</a> 
+                     <i class="icon-angle-right"></i>
+                  </li>
+                  <li>
+                     <a href="#">Conference</a>
+                     <i class="icon-angle-right"></i>
+                  </li>
+				  <li>
+                     <a href="#">Add Conference</a>
+                     <i class="icon-angle-right"></i>
+                  </li>
+                 
+               </ul>
+               <!-- END PAGE TITLE & BREADCRUMB-->
+            </div>
+         </div>
+         <!-- END PAGE HEADER-->
+         <!-- BEGIN PAGE CONTENT-->
+        <div class="portlet box blue">
+
+                           <div class="portlet-title">
+
+                              <div class="caption"><i class="icon-reorder"></i>Add Conference</div>
+
+                              <div class="tools">
+
+                                 <a href="javascript:;" class="collapse"></a>
+
+                                 <a href="#portlet-config" data-toggle="modal" class="config"></a>
+
+                                 <a href="javascript:;" class="reload"></a>
+
+                                 <a href="javascript:;" class="remove"></a>
+
+                              </div>
+
+                           </div>
+
+                           <div class="portlet-body form">
+
+                              <!-- BEGIN FORM-->
+
+                              <form action="#" class="horizontal-form">
+
+                                 <div class="form-body">
+
+                                    <h3 class="form-section">Conference Info</h3>
+
+                                    <div class="row">
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Name</label>
+
+                                             <input type="text" id="Name"  name="name" class="form-control" placeholder="Conference Name">
+
+                                             <span class="help-block"></span>
+
+                                          </div>
+
+                                       </div>
+
+                                       <!--/span-->
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Date</label>
+
+                                             <input type="date" id="date"  name="date" class="form-control" >
+
+                                             <span class="help-block"></span>
+
+                                          </div>
+
+                                       </div>
+
+                                       <!--/span-->
+
+                                    </div>
+
+                                    <!--/row-->
+
+                                    <div class="row">
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Attendee</label>
+<input type="text" id="attendee"  name="attendee" class="form-control" placeholder="Enter Max Attendee eg: 100">
+                                            
+
+                                          </div>
+
+                                       </div>
+
+                                       <!--/span-->
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                              <label >Duration</label>
+							  <table>
+<tr><td>
+                              <select  class="form-control input-xsmall" name="hour">
+
+                                 <option value="1hr" >1</option>
+								 <option value="2hr">2</option>
+                                 <option value="3hr">3</option>
+                                 <option value="4hr">4</option>
+                                 <option value="5hr">5</option>
+                              </select><span class="help-block">Hr
+							</span></td>  
+							  <td>
+							  <select  class="form-control input-xsmall" name="min">
+
+                                 <option>1</option>
+								 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                                 <option>5</option>
+                              </select><span class="help-block">Min
+							</span>
+							  </td></tr></table>
+							 
+							
+
+                           </div>
+
+
+                                       </div><!--/span-->
+
+                                       
+
+                                    </div> <!--/row-->   
+
+                                        
+									
+									 <div class="row">
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Conference Type</label>
+											   <select  class="select2_category form-control" id="type" name="type">
+
+                                 <option >Daily</option>
+								 <option>Weekly</option>
+                                 <option>Monthly</option>
+                                
+                              </select>
+
+                                            
+
+                                          </div>
+
+                                       </div> <!--/span-->
+
+                                       
+
+                     <div class="col-md-6" >
+						<div class="form-group" id="weekdays">
+
+                                             <label class="control-label">Weekdays</label>
+                                       
+
+                                    <div class="radio-list">
+
+                                                <label class="radio-inline"> 
+
+                                                <input type="checkbox" name="optionsCheck1" id="optionsCheck1" value="monday" checked> Monday
+
+                                                </label>
+
+                                                <label class="radio-inline">
+
+                                                <input type="checkbox" name="optionsCheck2" id="optionsCheck2" value="tuesday" > Tuesday
+
+                                                </label>
+												<label class="radio-inline">
+
+                                                <input type="checkbox" name="optionsCheck3" id="optionsCheck2" value="wednesday" > Wednesday
+
+                                                </label>
+												<label class="radio-inline">
+
+                                                <input type="checkbox" name="optionsCheck4" id="optionsCheck2" value="thursday" > Thursday
+
+                                                </label>
+												<label class="radio-inline">
+
+                                                <input type="checkbox" name="optionsCheck5" id="optionsCheck2" value="friday" > Friday
+
+                                                </label>
+                                        </div> <!--/radio-->
+   						 </div><!--/form grp-->
+						    <div class="form-group" id="monthly">
+
+                                             <label class="control-label">Date</label>
+
+                                             <input type="date" id="date" class="form-control" placeholder="">
+
+                                             <span class="help-block"></span>
+
+                                          </div>
+						 
+						  <div class="form-group">
+
+                              <label class="control-label col-md-3">Default Timepicker</label>
+
+                              <div class="col-md-3">
+
+                                 <div class="input-group bootstrap-timepicker">                                       
+
+                                    <input type="text" class="form-control timepicker-default">
+
+                                    <span class="input-group-btn">
+
+                                    <button class="btn default" type="button"><i class="icon-time"></i></button>
+
+                                    </span>
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+						 
+						 
+                     </div>  <!--/span-->
+		  </div>   <!--/row-->  
+
+                                        
+
+                                    <div class="row">
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Group</label>
+
+                                             <select class="select2_category form-control" name="group" data-placeholder="Choose a Category" tabindex="1">
+
+                                                <option value="Category 1">Category 1</option>
+
+                                                <option value="Category 2">Category 2</option>
+
+                                                <option value="Category 3">Category 5</option>
+
+                                                <option value="Category 4">Category 4</option>
+
+                                             </select>
+
+                                          </div>
+
+                                       </div>
+
+                                       <!--/span-->
+
+                                      <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Mute</label>
+
+                                             <div class="radio-list">
+
+                                                <label class="radio-inline">
+
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> On
+
+                                                </label>
+
+                                                <label class="radio-inline">
+
+                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" > Off
+
+                                                </label>
+
+                                             </div>
+
+                                          </div>
+
+                                       </div>
+
+
+                                       <!--/span-->
+
+                                    </div>
+
+                                    <!--/row--> 
+									<div class="row">
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Members</label>
+
+                                             <select class="select2_category form-control" name="members" data-placeholder="Choose a Category" tabindex="1">
+
+                                                <option value="Category 1">member 1</option>
+
+                                                <option value="Category 2">member 2</option>
+
+                                                <option value="Category 3">member 5</option>
+
+                                                <option value="Category 4">member 4</option>
+
+                                             </select>
+
+                                          </div>
+
+                                       </div>
+
+                                       <!--/span-->
+
+                                 <div class="col-md-6">
+
+                                     <div class="form-group">
+
+                                               <label class="control-label">Talking Mode</label>
+
+                                        <div class="radio-list">
+
+                                                      <label class="radio-inline">
+
+                                                          <input type="radio" name="optionsRadios1" id="optionsRadios10" value="optionon" checked> On
+
+                                                       </label>
+
+                                                    <label class="radio-inline">
+
+                                                         <input type="radio" name="optionsRadios1" id="optionsRadios11" value="optionoff" > Off
+
+                                                    </label>
+
+                                             
+
+                                       
+										  <label class="radio-inline" >
+
+                                                  <select  class="form-control input-xsmall"  name="dtmf" >
+								
+                                 				<option>1</option>
+								 				<option>2</option>
+                                 				<option>3</option>
+                                 				<option>4</option>
+                               				    <option>5</option>
+								  				<option>6</option>
+								 				<option>7</option>
+                               				    <option>8</option>
+                                 				<option>9</option>
+                                 				<option>0</option>
+								 				<option>*</option>
+                                 				<option>#</option>
+                             						 </select>Choose DTMF mode
+
+                                                </label>
+
+                                       </div> <!--/radio list--> 
+   							</div>  <!--/form grp--> 
+  					 </div>  <!--/span--> 
+ 
+					</div>  <!--/row--> 							
+
+                                           
+
+                                   
+									<div class="row">
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Moderator Phone Number</label>
+<input type="text" id="mod_phn" class="form-control"  name="mod_phn" placeholder="Enter Moderator's Phn Number">
+                                             
+                                          </div>
+
+                                       </div>
+
+                                       <!--/span-->
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">play file</label>
+ <!-- BEGIN PAGE CONTENT-->
+         <div class="row">
+            <div class="col-md-12">
+              
+               <form id="fileupload" action="" method="POST" enctype="multipart/form-data">
+                  <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                  <div class="row fileupload-buttonbar">
+                     <div class="col-lg-7">
+                        <!-- The fileinput-button span is used to style the file input field as button -->
+                        <span class="btn green fileinput-button">
+                        <i class="icon-plus"></i>
+                        <span>Add files...</span>
+                        <input type="file" name="files[]" multiple>
+                        </span>
+                        <button type="submit" class="btn blue start">
+                        <i class="icon-upload"></i>
+                        <span>Start upload</span>
+                        </button>
+                        <button type="reset" class="btn yellow cancel">
+                        <i class="icon-ban-circle"></i>
+                        <span>Cancel upload</span>
+                        </button>
+                        <button type="button" class="btn red delete">
+                        <i class="icon-trash"></i>
+                        <span>Delete</span>
+                        </button>
+                     
+                        <!-- The loading indicator is shown during file processing -->
+                        <span class="fileupload-loading"></span>
+                     </div>
+                     <!-- The global progress information -->
+                     <div class="col-lg-5 fileupload-progress fade">
+                        <!-- The global progress bar -->
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                           <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                        </div>
+                        <!-- The extended global progress information -->
+                        <div class="progress-extended">&nbsp;</div>
+                     </div>
+                  </div>
+                  <!-- The table listing the files available for upload/download -->
+                  <table role="presentation" class="table table-striped clearfix">
+                     <tbody class="files"></tbody>
+                  </table>
+               </form>
+               
+                   
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- END PAGE CONTENT-->
+      </div>
+      <!-- END PAGE --> 
+   
+                                             
+
+                                            
+
+                                       
+
+                                    <!--/row--> 
+									
+									<div class="row">
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Conference Phone Number</label>
+
+                                             <input type="text" id="confnum"  name="conf_phn" class="form-control" placeholder="Conference Number">
+
+                                          </div>
+
+                                       </div>
+
+                                       <!--/span-->
+
+                                       <div class="col-md-6">
+
+                                          <div class="form-group">
+
+                                             <label class="control-label">Notification</label>
+
+                                             <div class="radio-list">
+
+                                                <label class="radio-inline">
+
+                                                <input type="checkbox" name="optionsCheck" id="optionsCheck1" value="SMS" checked> SMS
+
+                                                </label>
+
+                                                <label class="radio-inline">
+
+                                                <input type="checkbox" name="optionsCheck" id="optionsCheck2" value="E-mail" > E-mail
+
+                                                </label>
+
+                                             </div>
+
+                                          </div>
+
+                                       </div>
+
+                                       <!--/span-->
+
+                                    </div>
+
+                                    <!--/row--> 
+
+                                   
+
+                                    <div class="row">
+
+                                       <div class="col-md-12 ">
+
+                                          <div class="form-group">
+
+                                             <label >Description </label>
+
+                                             <textarea class="form-control" name="description"></textarea>
+
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+
+                                    
+
+                                 <div class="form-actions right">
+
+                                    <button type="button" class="btn default">Cancel</button>
+
+                                    <button type="submit" class="btn blue"><i class="icon-ok"></i> Save</button>
+
+                                 </div>
+
+                              </form>
+
+                              <!-- END FORM--> 
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+		
+		
+         <!-- END PAGE CONTENT -->
+      </div>
+      <!-- END PAGE -->
+   </div>
+ 
+        
+               <!-- BEGIN PORTLET-->   
+          <div class="form-group">
+         <div class="col-md-4">
+        <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
+                                    <input type="text" class="form-control" name="from">
+                                    <span class="input-group-addon">to</span>
+                                    <input type="text" class="form-control" name="to">
+                                 </div>
+                                 <!-- /input-group -->
+                                 <span class="help-block">Select date range</span>
+                              </div>
+                           </div>
+                           
+                  
+           
+              
+<!-- BEGIN FOOTER -->
+   
+   <!-- END FOOTER -->
+   <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+   <!-- BEGIN CORE PLUGINS -->   
+   <!--[if lt IE 9]>
+   <script src="assets/plugins/respond.min.js"></script>
+   <script src="assets/plugins/excanvas.min.js"></script> 
+   <![endif]-->   
+   <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>     
+   <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/bootstrap/js/bootstrap2-typeahead.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript" ></script>
+   <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>  
+   <script src="assets/plugins/jquery.cookie.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript" ></script>
+   <!-- END CORE PLUGINS -->
+   <!-- BEGIN PAGE LEVEL PLUGINS -->
+   <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+ <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+   <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script> 
+  
+   <!-- END PAGE LEVEL PLUGINS -->
+   <!-- BEGIN PAGE LEVEL SCRIPTS -->
+   <script src="assets/scripts/app.js"></script>
+   <script src="assets/scripts/form-components.js"></script>     
+   <!-- END PAGE LEVEL SCRIPTS -->
+   <script>
+      jQuery(document).ready(function() {       
+         // initiate layout and plugins
+         App.init();
+         FormComponents.init();
+      });
+   </script>
+   <!-- END JAVASCRIPTS -->   
+</body>
+<!-- END BODY -->
+</html>

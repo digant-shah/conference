@@ -1,0 +1,6 @@
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'memblue_master';
+$db['default']['password'] = '?[)iUGugEeKQ';
+$db['default']['database'] = 'memblue_master';
+$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbprefix'] = '';

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.0
+Version: 1.5
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+      
+   <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+   <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+   <link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+   <!-- END GLOBAL MANDATORY STYLES -->
+   <!-- BEGIN PAGE LEVEL STYLES -->
+   
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-datepicker/css/datepicker.css" />
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-timepicker/compiled/timepicker.css" />
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-colorpicker/css/colorpicker.css" />
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+   
+   <!-- END PAGE LEVEL STYLES -->
+  
+</head>
+
+
+
+ 
+        
+               <!-- BEGIN PORTLET-->   
+          <div class="form-group">
+         <div class="col-md-4">
+        <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
+                                    <input type="text" class="form-control" name="from">
+                                    <span class="input-group-addon">to</span>
+                                    <input type="text" class="form-control" name="to">
+                                 </div>
+                                 <!-- /input-group -->
+                                 <span class="help-block">Select date range</span>
+                              </div>
+                           </div>
+                           
+                  
+           
+              
+<!-- BEGIN FOOTER -->
+   
+   <!-- END FOOTER -->
+   <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+   <!-- BEGIN CORE PLUGINS -->   
+   <!--[if lt IE 9]>
+   <script src="assets/plugins/respond.min.js"></script>
+   <script src="assets/plugins/excanvas.min.js"></script> 
+   <![endif]-->   
+   <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>     
+   <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/bootstrap/js/bootstrap2-typeahead.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript" ></script>
+   <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>  
+   <script src="assets/plugins/jquery.cookie.min.js" type="text/javascript"></script>
+   <script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript" ></script>
+   <!-- END CORE PLUGINS -->
+   <!-- BEGIN PAGE LEVEL PLUGINS -->
+   <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+ <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+   <script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script> 
+  
+   <!-- END PAGE LEVEL PLUGINS -->
+   <!-- BEGIN PAGE LEVEL SCRIPTS -->
+   <script src="assets/scripts/app.js"></script>
+   <script src="assets/scripts/form-components.js"></script>     
+   <!-- END PAGE LEVEL SCRIPTS -->
+   <script>
+      jQuery(document).ready(function() {       
+         // initiate layout and plugins
+         App.init();
+         FormComponents.init();
+      });
+   </script>
+   <!-- END JAVASCRIPTS -->   
+</body>
+<!-- END BODY -->
+</html>
